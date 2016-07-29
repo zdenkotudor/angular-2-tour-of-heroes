@@ -1,10 +1,6 @@
 import {Component} from '@angular/core';
 import {HeroDetailComponent} from './hero-detail.component'
-
-export class Hero {
-  id: number;
-  name: string;
-}
+import {Hero} from './hero';
 
 @Component({
   selector: 'my-app',
@@ -16,9 +12,9 @@ export class Hero {
         <span class="badge">{{hero.id}}</span> {{hero.name}}
       </li>
     </ul>
-    <hero-detail></hero-detail>
+    <hero-detail [hero]="selectedHero"></hero-detail>
     `,
-
+  directives: [HeroDetailComponent],
   styles: [`
     .selected {
       background-color: #CFD8DC !important;
