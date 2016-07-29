@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {HeroDetailComponent} from './hero-detail.component'
 
 export class Hero {
   id: number;
@@ -15,16 +16,7 @@ export class Hero {
         <span class="badge">{{hero.id}}</span> {{hero.name}}
       </li>
     </ul>
-    <div class="hero-details" *ngIf="selectedHero">
-      <h2>{{selectedHero.name}} details!</h2>
-      <div>
-        <label>Id: </label> {{selectedHero.id}}
-      </div>
-      <div>
-        <label>Name: </label>
-        <input [(ngModel)]="selectedHero.name" placeholder="name"/>
-      </div>
-    </div>
+    <hero-detail></hero-detail>
     `,
 
   styles: [`
