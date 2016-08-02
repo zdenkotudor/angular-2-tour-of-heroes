@@ -17,6 +17,8 @@ import {Hero} from './hero';
 
   directives: [HeroDetailComponent],
 
+  providers: [HeroService],
+
   styles: [`
     .selected {
       background-color: #CFD8DC !important;
